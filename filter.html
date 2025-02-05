@@ -1,0 +1,183 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="mx-auto">Filter  Details</h1>
+    {% if s %}
+    {% for i in f %}
+    {{ i.name }}
+    {% endfor %}
+    {% else %}
+    <p>noresult</p>
+    {% endif %}
+    {% comment %} {{ f.name }}
+    {% for i in f %}
+
+    <div class="tab-content mt-4">
+    <div class="tab-pane active" id="profile1">
+        <div class="list_1_right2_inner row mx-0">
+          <div class="col-md-4 col-sm-4 ps-0">
+            <div class="list_1_right2_inner_left">
+                
+                {% if i.image %}
+              <a href="{% url 'list_detail' id=i.id %}"><img src="{{ i.image.url }}" class="img-fluid" alt="abc"></a>
+              {% endif %}
+       
+       
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 list_1_right2_inner_right_inner">
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+              <b class="d-block mb-3 fs-5"><a href="{% url 'list_detail' id=i.id %}"><i class="bi bi-heart col_red me-2 align-middle"></i> {{ i.name }}</a></b>
+              <ul class="font_15 mb-0">
+                <li class="d-flex"><b class="me-2"> Age:</b> <span>{{ i.age }} Yrs Height: {{ i.height }}</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Religion:</b> <span>{{ i.religion }} </span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Caste:</b> <span> {{ i.caste }} </span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Location:</b> <span>{{ i.location }} </span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Education:</b> <span>{{ i.education }} </span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Profession:</b> <span> {{ i.profession}} </span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Annual Income:</b> <span> {{ i.annualincome }}  Lakhs</span></li>
+              </ul>
+              <span class="d-block mt-3"><a class="button_2" href="{% url 'list_detail' id=i.id %}"><i class="bi bi-person-fill me-1 align-middle"></i> View Full Profile</a></span>
+            </div>
+              </div>
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+               <p class="mt-1">Integer non nisl elit in ac tempor ante, eget iaculis augue. Nuncekon dolor mi, accumsan quis ante id, eleifend suscipit purus. Praesent augue eros, consectetur eu eleifend inno, eget condimentum auctor, libero ipsum viverra nisi, at vulputate ex mi suscipit nunc  ut dui malesuada ornare ut id tellus.</p>
+               <ul class="mb-0 d-flex social_brands">
+<li><a class="bg-primary d-inline-block text-white text-center" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-facebook"></i></a></li>
+<li class="ms-2"><a class="bg-success d-inline-block text-white text-center" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-instagram"></i></a></li>
+<li class="ms-2"><a class="bg-warning d-inline-block text-white text-center" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-linkedin"></i></a></li>
+<li class="ms-2"><a class="bg-info d-inline-block text-white text-center" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-pinterest"></i></a></li>
+<li class="ms-2"><a class="bg-danger d-inline-block text-white text-center" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-youtube"></i></a></li>
+</ul>
+              <span class="d-block mt-3"><a class="button_1" href="{% url 'list_detail' id=i.id  %}"><i class="bi bi-person-fill me-1 align-middle"></i> View Detail</a></span>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>	
+        
+
+        <div class="list_1_right2_inner row border-top mt-4 pt-4 mx-0">
+          <div class="col-md-4 col-sm-4 ps-0">
+            <div class="list_1_right2_inner_left">
+              {% comment %} <a href="list_detail.html"><img src="{% static 'img/56.jpg' %}" class="img-fluid" alt="abc"></a> {% endcomment %}
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 list_1_right2_inner_right_inner">
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+              {% comment %} <b class="d-block mb-3 fs-5"><a href="list_detail.html"><i class="bi bi-heart col_red me-2 align-middle"></i> Sed Cursus </a></b>
+              <ul class="font_15 mb-0">
+                <li class="d-flex"><b class="me-2"> Age:</b> <span>26 Yrs Height: 5 Ft 5 In</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Religion:</b> <span> Christian</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Caste:</b> <span> English</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Location:</b> <span> India/ Maharastra / Mumbai</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Education:</b> <span> BBA</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Profession:</b> <span> Clerk</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Annual Income:</b> <span> 3 - 5 Lakhs</span></li> {% endcomment %}
+              </ul>
+              {% comment %} <span class="d-block mt-3"><a class="button_2" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Full Profile</a></span> {% endcomment %}
+            </div>
+              </div>
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+               {% comment %} <p class="mt-1">Integer non nisl elit in ac tempor ante, eget iaculis augue. Nuncekon dolor mi, accumsan quis ante id, eleifend suscipit purus. Praesent augue eros, consectetur eu eleifend inno, eget condimentum auctor, libero ipsum viverra nisi, at vulputate ex mi suscipit nunc  ut dui malesuada ornare ut id tellus.</p>
+               <ul class="mb-0 d-flex social_brands">
+<li><a class="bg-primary d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-facebook"></i></a></li>
+<li class="ms-2"><a class="bg-success d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-instagram"></i></a></li>
+<li class="ms-2"><a class="bg-warning d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-linkedin"></i></a></li>
+<li class="ms-2"><a class="bg-info d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-pinterest"></i></a></li>
+<li class="ms-2"><a class="bg-danger d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-youtube"></i></a></li>
+</ul> {% endcomment %}
+              {% comment %} <span class="d-block mt-3"><a class="button_1" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Detail</a></span> {% endcomment %}
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list_1_right2_inner row border-top mt-4 pt-4 mx-0">
+          <div class="col-md-4 ps-0 col-sm-4">
+            <div class="list_1_right2_inner_left">
+              {% comment %} <a href="list_detail.html"><img src="{% static 'img/57.jpg' %}" class="img-fluid" alt="abc"></a> {% endcomment %}
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 list_1_right2_inner_right_inner">
+              <div class="col">
+                {% comment %} <div class="list_1_right2_inner_right">
+              <b class="d-block mb-3 fs-5"><a href="list_detail.html"><i class="bi bi-heart col_red me-2 align-middle"></i> Fusce Nec </a></b>
+              <ul class="font_15 mb-0">
+                <li class="d-flex"><b class="me-2"> Age:</b> <span>27 Yrs Height: 5 Ft 6 In</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Religion:</b> <span> Christian</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Caste:</b> <span> English</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Location:</b> <span> India/ Mp / Bhopal</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Education:</b> <span> MBBS</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Profession:</b> <span> Doctor</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Annual Income:</b> <span> 5 - 7 Lakhs</span></li>
+              </ul>
+              <span class="d-block mt-3"><a class="button_2" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Full Profile</a></span>
+            </div>
+              </div>
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+               <p class="mt-1">Integer non nisl elit in ac tempor ante, eget iaculis augue. Nuncekon dolor mi, accumsan quis ante id, eleifend suscipit purus. Praesent augue eros, consectetur eu eleifend inno, eget condimentum auctor, libero ipsum viverra nisi, at vulputate ex mi suscipit nunc  ut dui malesuada ornare ut id tellus.</p>
+               <ul class="mb-0 d-flex social_brands">
+<li><a class="bg-primary d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-facebook"></i></a></li>
+<li class="ms-2"><a class="bg-success d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-instagram"></i></a></li>
+<li class="ms-2"><a class="bg-warning d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-linkedin"></i></a></li>
+<li class="ms-2"><a class="bg-info d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-pinterest"></i></a></li>
+<li class="ms-2"><a class="bg-danger d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-youtube"></i></a></li>
+</ul>
+              <span class="d-block mt-3"><a class="button_1" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Detail</a></span> {% endcomment %}
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list_1_right2_inner row border-top mt-4 pt-4 mx-0">
+          <div class="col-md-4 ps-0 col-sm-4">
+            <div class="list_1_right2_inner_left">
+              {% comment %} <a href="list_detail.html"><img src="{% static 'img/58.jpg' %}" class="img-fluid" alt="abc"></a> {% endcomment %}
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1 list_1_right2_inner_right_inner">
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+              {% comment %} <b class="d-block mb-3 fs-5"><a href="list_detail.html"><i class="bi bi-heart col_red me-2 align-middle"></i> Dolor Porta </a></b>
+              <ul class="font_15 mb-0">
+                <li class="d-flex"><b class="me-2"> Age:</b> <span>23 Yrs Height: 5 Ft 8 In</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Religion:</b> <span> Hindu</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Caste:</b> <span> Kayastha</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Location:</b> <span> India / Punjab / Ludhiana</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Education:</b> <span> B.com</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Profession:</b> <span> Accounts</span></li>
+                <li class="d-flex mt-2"><b class="me-2"> Annual Income:</b> <span> 6 - 9 Lakhs</span></li>
+              </ul> {% endcomment %}
+              {% comment %} <span class="d-block mt-3"><a class="button_2" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Full Profile</a></span> {% endcomment %}
+            </div>
+              </div>
+              <div class="col">
+                <div class="list_1_right2_inner_right">
+               {% comment %} <p class="mt-1">Integer non nisl elit in ac tempor ante, eget iaculis augue. Nuncekon dolor mi, accumsan quis ante id, eleifend suscipit purus. Praesent augue eros, consectetur eu eleifend inno, eget condimentum auctor, libero ipsum viverra nisi, at vulputate ex mi suscipit nunc  ut dui malesuada ornare ut id tellus.</p>
+               <ul class="mb-0 d-flex social_brands">
+<li><a class="bg-primary d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-facebook"></i></a></li>
+<li class="ms-2"><a class="bg-success d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-instagram"></i></a></li>
+<li class="ms-2"><a class="bg-warning d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-linkedin"></i></a></li>
+<li class="ms-2"><a class="bg-info d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-pinterest"></i></a></li>
+<li class="ms-2"><a class="bg-danger d-inline-block text-white text-center" href="list_detail.html"><i class="bi bi-youtube"></i></a></li>
+</ul> {% endcomment %}
+              {% comment %} <span class="d-block mt-3"><a class="button_1" href="list_detail.html"><i class="bi bi-person-fill me-1 align-middle"></i> View Detail</a></span> {% endcomment %}
+            {% comment %} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {% endfor %} {% endcomment %} 
+</div>
+{% endblock %}

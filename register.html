@@ -1,0 +1,326 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Matrimonial</title>
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+	 <link href="{% static 'fonts/css/fontawesome.min.css' %}" rel="stylesheet" >
+	<link href="{% static 'fonts/css/brands.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'fonts/css/solid.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/global.css' %}" rel="stylesheet">
+	<link href="{% static 'css/index.css' %}" rel="stylesheet">
+	
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+	
+	<link href="{% static 'login/css/bootstrap.min.css' %}" rel="stylesheet" >
+	<link href="{% static 'logincss/global.css' %}" rel="stylesheet">
+	<link href="{% static 'logincss/blog.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-md navbar-light  p-0 pt-2 pb-2" id="navbar_sticky">
+		  <div class="container-xl">
+			<a class="p-0 navbar-brand fw-bold me-0 family_1 col_red" href="index.html"><i class="fa fa-heart me-1 col_brown"></i> Matrimonial<br>
+		<span class="family_2 fw-normal font_14 col_brown">Best Matrimony Website</span>
+		</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			   <ul class="navbar-nav mb-0 ms-auto">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				</li>
+				
+				{% comment %} <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Explore
+				  </a>
+				  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="list.html"><i class="fa fa-star col_red me-1"></i>  Marathi Shaadi</a></li>
+					<li><a class="dropdown-item" href="list1.html"><i class="fa fa-star col_red me-1"></i>   Assamese  Shaadi</a></li>
+					<li><a class="dropdown-item" href="list.html"><i class="fa fa-star col_red me-1"></i>  Bengali Shaadi</a></li>
+					<li><a class="dropdown-item" href="list1.html"><i class="fa fa-star col_red me-1"></i>  Telugu Shaadi</a></li>
+					<li><a class="dropdown-item" href="list.html"><i class="fa fa-star col_red me-1"></i>  Punjabi Shaadi</a></li>
+					<li><a class="dropdown-item" href="list1.html"><i class="fa fa-star col_red me-1"></i>  Jain Shaadi</a></li>
+					<li><a class="dropdown-item" href="list.html"><i class="fa fa-star col_red me-1"></i>  Kannada Shaadi</a></li>
+					<li><a class="dropdown-item border-0" href="list1.html.html"> <i class="fa fa-star col_red me-1"></i>  Muslim Shaadi</a></li>
+				  </ul>
+				</li> {% endcomment %}
+				
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Profile
+				  </a>
+				  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="list/">  Profile 1</a></li>
+					<li><a class="dropdown-item" href="list1/">   Profile 2</a></li>
+					<li><a class="dropdown-item" href="list_detail/">   Profile Detail</a></li>
+					<li><a class="dropdown-item border-0" href="search/"> Search Profile</a></li>
+				  </ul>
+				</li>
+		
+				
+				<li class="nav-item ">
+				  <a class="nav-link " href="event/" id="navbarDropdown" role="button"  aria-expanded="false">
+					Events
+				  </a>
+				  {% comment %} <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="event/"> Events</a></li>
+				  </ul> {% endcomment %}
+				</li>
+				
+				{% comment %} <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Product
+				  </a>
+				  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="shop.html"> Product</a></li>
+					<li><a class="dropdown-item" href="detail.html"> Product Detail</a></li>
+					<li><a class="dropdown-item" href="cart.html"> Shopping Cart</a></li>
+					<li><a class="dropdown-item border-0" href="checkout.html"> Checkout</a></li>
+				  </ul>
+				</li> {% endcomment %}
+				
+				{% comment %} <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Blog
+				  </a>
+				  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="blog.html"> Blog</a></li>
+					<li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
+				  </ul>
+				</li> {% endcomment %}
+				
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Pages
+				  </a>
+				  <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+					<li><a class="dropdown-item" href="about/"> About Us</a></li>
+					 <li><a class="dropdown-item" href="team/"> Team</a></li>
+					  <li><a class="dropdown-item border-0" href="gallery/"> Gallery</a></li>
+				  </ul>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="contact/">Contact </a>
+				</li>
+			  </ul>
+			  <ul class="navbar-nav mb-0 ms-auto">
+			 <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle dropdown_search nav_hide fs-5 lh-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="fa fa-search"></i>
+				  </a>
+				  <ul class="dropdown-menu drop_2 p-3" aria-labelledby="navbarDropdown">
+					<li>
+					  <div class="input-group">
+						<input type="text" class="form-control bg_light border-0 font_13" placeholder="Enter Keyword">
+						<span class="input-group-btn">
+							<button class="btn btn-primary bg_brown  p-3 px-4 border-0" type="button">
+								<i class="fa fa-search"></i> </button>
+						</span>
+				</div>
+					</li>
+				  </ul>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle drop_togn nav_hide fs-5 lh-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="bi bi-person"></i>
+				  </a>
+				  <ul class="dropdown-menu drop_cart rounded-0 border-0" aria-labelledby="navbarDropdown" >
+					<ul class="navbar-nav align-items-lg-center ms-auto">
+						   
+						   <ul class="dropdown-menu drop_1 drop_log shadow" aria-labelledby="navbarDropdown">
+							<li class="nav-item dropdown drop_border">
+								{% comment %} <a class="nav-link dropdown-toggle fs-4 active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								  
+								</a> {% endcomment %}
+								<ul class="dropdown-menu drop_1 drop_log shadow" aria-labelledby="navbarDropdown">
+								  <li><a class="dropdown-item" href="login.html"> Login </a></li>
+								  <li><a class="dropdown-item border-0" href="register.html"> Register</a></li>
+								</ul>
+							</li>
+							
+		  
+						   </ul>
+					   </li>
+		
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		</section>
+		
+		
+{% comment %} register form  {% endcomment %}
+
+<section id="center" class="search_form  pt-5 pb-5">
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+   <div class="container-xl">
+	    <h1 class="text-danger text-center mb-4">REGISTER</h1>
+		<div class="row search_form1 shadow p-4 w-50 mx-auto">
+		 <div class="col-md-12">
+		  <span class="text-center d-block mb-3">Your partner search begins with a<br>
+FREE REGISTRATION!</span>
+           <ul>
+		    <li class="justify-content-between d-flex">
+			<span class="d-inline-block mt-2 w-25">Profile photo</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example" name="religion">
+					<option selected="">Select Profile</option>
+					<option value="1">Hindu</option>
+					<option value="2">Muslim</option>
+					{% comment %} <option value="3">Sikh</option> {% endcomment %}
+					<option value="4">Christian</option>
+					{% comment %} <option value="5">Jain</option> {% endcomment %}
+				</select> -->
+				<input class="form-control w-75" type="file" name="image">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Name</span>
+			<input class="form-control w-75" placeholder="Abc..." type="text" name="name">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Age</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">DD</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">02</option>
+					<option value="8">07</option>
+					<option value="9">08</option>
+					<option value="10">09</option>
+					<option value="11">10</option>
+					<option value="12">11</option>
+					<option value="13">12</option>
+					<option value="14">13</option>
+					<option value="15">14</option>
+					<option value="16">15</option>
+				</select> -->
+				<input class="form-control w-75"  type="text" name="age">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Height</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">MM</option>
+					<option value="1">JAN</option>
+					<option value="2">FEB</option>
+					<option value="3">MAR</option>
+					<option value="4">APR</option>
+					<option value="5">MAY</option>
+					<option value="6">JUN</option>
+					<option value="7">JUL</option>
+					<option value="8">AUG</option>
+					<option value="9">SEP</option>
+					<option value="10">OCT</option>
+					<option value="11">NOV</option>
+					<option value="12">DEC</option>
+				</select> -->
+				<input type="text"class="form-control w-75" name="height">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Caste</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">YEAR</option>
+					<option value="1">2000</option>
+					<option value="2">1999</option>
+					<option value="3">1998</option>
+					<option value="4">1997</option>
+					<option value="5">1996</option>
+					<option value="6">1995</option>
+					<option value="7">1994</option>
+					<option value="8">1993</option>
+					<option value="9">1992</option>
+					<option value="10">1991</option>
+					<option value="11">1990</option>
+					<option value="12">1989</option>
+				</select> -->
+				<input class="form-control w-75" type="text" name="caste">
+			</li>
+			
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Religion</span>
+			<select class="form-select w-75" aria-label="Default select example" name="religion">
+					<option selected="">Religion</option>
+					<option value="Hindu">Hindu</option>
+					<option value="Muslim">Muslim</option>
+					<!-- <option value="3">Sikh</option> -->
+					<option value="Christian">Christian</option>
+					<!-- <option value="5">Jain</option> -->
+				</select>
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Location</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+					<option selected="">Hindi</option>
+					<option value="1">Telugu</option>
+					<option value="2">Tamil</option>
+					<option value="3">Punjabi</option>
+					<option value="4">Bengali</option>
+					<option value="5">English</option>
+				</select> -->
+				<input class="form-control w-75" placeholder="" type="text" name="location">
+
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Education</span>
+				<input class="form-control w-75" placeholder="" type="text" name="edu">
+
+			</li>	
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Profession</span>
+				<input class="form-control w-75" placeholder="" type="text" name="profession">
+
+			</li>	
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Annual Income</span>
+				<input class="form-control w-75" placeholder="" type="text" name="income">
+
+			</li>	
+
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Email</span>
+			<input class="form-control w-75" name="email" placeholder="Enter Email..." type="text">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Password</span>
+			<input class="form-control w-75" name="password"placeholder="Enter Password" type="password">
+			</li>
+		   </ul>
+		   <div class="d-flex">
+		     <input class="form-check-input me-2" type="checkbox" value="" id="invalidCheck" required="">
+		   <label class="form-check-label" for="invalidCheck">
+					  Before registration read our <a href="#">Privacy Statement</a> and <a href="#">Terms & Conditions</a>
+					</label>
+		   </div>
+		   <span class="d-block mt-4 text-center"><button class=" btn btn-success w-50 mx-auto" type="submit" >Register For Free</button></span>
+		 </div>
+		</div>
+   </div>
+</form>
+
+ </section>
+<!-- end form -->
+		
+<script src="{%static 'login/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{%static 'login/js/theme.min.js' %}"></script>
+
+</body>
+</html>

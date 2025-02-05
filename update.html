@@ -1,0 +1,154 @@
+
+{% extends 'index.html' %}
+{% block content %}
+<section id="center" class="search_form  pt-5 pb-5">
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+   <div class="container-xl">
+	{% for i in d %}
+	    <h1 class="text-danger text-center mb-4">REGISTER</h1>
+		<div class="row search_form1 shadow p-4 w-50 mx-auto">
+		 <div class="col-md-12">
+		  <span class="text-center d-block mb-3">Your partner search begins with a<br>
+FREE REGISTRATION!</span>
+           <ul>
+		    <li class="justify-content-between d-flex">
+			<span class="d-inline-block mt-2 w-25">Profile photo</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example" name="religion">
+					<option selected="">Select Profile</option>
+					<option value="1">Hindu</option>
+					<option value="2">Muslim</option>
+					{% comment %} <option value="3">Sikh</option> {% endcomment %}
+					<option value="4">Christian</option>
+					{% comment %} <option value="5">Jain</option> {% endcomment %}
+				</select> -->
+				<input class="form-control w-75" type="file" name="image" value="{{ i.image }}">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Name</span>
+			<input class="form-control w-75" placeholder="Abc..." type="text" name="name" value="{{ i.name }}">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Age</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">DD</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">02</option>
+					<option value="8">07</option>
+					<option value="9">08</option>
+					<option value="10">09</option>
+					<option value="11">10</option>
+					<option value="12">11</option>
+					<option value="13">12</option>
+					<option value="14">13</option>
+					<option value="15">14</option>
+					<option value="16">15</option>
+				</select> -->
+				<input class="form-control w-75"  type="text" name="age" value="{{ i.age }}">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Height</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">MM</option>
+					<option value="1">JAN</option>
+					<option value="2">FEB</option>
+					<option value="3">MAR</option>
+					<option value="4">APR</option>
+					<option value="5">MAY</option>
+					<option value="6">JUN</option>
+					<option value="7">JUL</option>
+					<option value="8">AUG</option>
+					<option value="9">SEP</option>
+					<option value="10">OCT</option>
+					<option value="11">NOV</option>
+					<option value="12">DEC</option>
+				</select> -->
+				<input type="text"class="form-control w-75" name="height" value="{{ i.height }}">
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Caste</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+						<option selected="">YEAR</option>
+					<option value="1">2000</option>
+					<option value="2">1999</option>
+					<option value="3">1998</option>
+					<option value="4">1997</option>
+					<option value="5">1996</option>
+					<option value="6">1995</option>
+					<option value="7">1994</option>
+					<option value="8">1993</option>
+					<option value="9">1992</option>
+					<option value="10">1991</option>
+					<option value="11">1990</option>
+					<option value="12">1989</option>
+				</select> -->
+				<input class="form-control w-75" type="text" name="caste" value="{{ i.caste }}">
+			</li>
+			
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Religion</span>
+			<select class="form-select w-75" aria-label="Default select example" name="religion" value="{{ i.religion }}">
+					<option selected="">Religion</option>
+					<option value="Hindu">Hindu</option>
+					<option value="Muslim">Muslim</option>
+					<!-- <option value="3">Sikh</option> -->
+					<option value="Christian">Christian</option>
+					<!-- <option value="5">Jain</option> -->
+				</select>
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Location</span>
+			<!-- <select class="form-select w-75" aria-label="Default select example">
+					<option selected="">Hindi</option>
+					<option value="1">Telugu</option>
+					<option value="2">Tamil</option>
+					<option value="3">Punjabi</option>
+					<option value="4">Bengali</option>
+					<option value="5">English</option>
+				</select> -->
+				<input class="form-control w-75" placeholder="" type="text" name="location" value="{{ i.location }}">
+
+			</li>
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Education</span>
+				<input class="form-control w-75" placeholder="" type="text" name="edu" value="{{ i.education }}">
+
+			</li>	
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Profession</span>
+				<input class="form-control w-75" placeholder="" type="text" name="profession" value="{{ i.profession }}">
+
+			</li>	
+			<li class="justify-content-between d-flex mt-3">
+				<span class="d-inline-block mt-2 w-25">Annual Income</span>
+				<input class="form-control w-75" placeholder="" type="text" name="income" value="{{ i.annualincome }}">
+
+			</li>	
+
+			<li class="justify-content-between d-flex mt-3">
+			<span class="d-inline-block mt-2 w-25">Email</span>
+			<input class="form-control w-75" name="email" placeholder="Enter Email..." type="text" value="{{ i.email }}">
+			</li>
+			
+
+		   </ul>
+
+		   <div class="d-flex">
+		     <input class="form-check-input me-2" type="checkbox" value="" id="invalidCheck" required="">
+		   <label class="form-check-label" for="invalidCheck">
+					  Before registration read our <a href="#">Privacy Statement</a> and <a href="#">Terms & Conditions</a>
+					</label>
+		   </div>
+		   <span class="d-block mt-4 text-center"><button class=" btn btn-success w-50 mx-auto" type="submit" >Register For Free</button></span>
+		 </div>
+		</div>
+		{% endfor %}
+   </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,348 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1 class="m-5 text-danger"> <center>welcome to matrimony profile</center></h1>
+<div class="m-5 p-5">
+<table class="table table-bordered ">
+				{% for i in p %}
+				<a href="{% url 'detail' id=i.id %}" class="btn btn-warning m-5">For Detail Register</a>
+
+	<div>
+	<tr class="bg-info">
+		<th>image</th>
+
+		<th>name</th>
+		<th>age</th>
+		<th>height</th>
+		<th>religion</th>
+		<th>caste</th>
+		<th>location</th>
+		<th>education</th>
+		<th>profession</th>
+		<th>annual income</th>
+
+		</tr>
+		<tr>
+			<!-- {% for i in p %} -->
+
+			<td>
+				{% if i.image %}
+				<div style="width:20%"><img src="{{ i.image.url }}" class="img-fluid" alt="abc"></div>
+											  {% endif %}
+				
+			</td>
+			<td>
+				{{ i.name }}
+				</td>
+				<td>
+				{{ i.age }}
+				</td>
+				<td>
+				{{ i.height }}
+				
+			</td>
+			<td>
+				{{ i.religion }}
+
+
+			</td>
+			<td>
+				{{ i.caste }}
+
+
+			</td>
+			<td>
+				{{ i.location }}
+
+
+			</td>
+
+			<td>
+				{{ i.education }}
+
+
+			</td>
+			<td>
+				{{ i.profession }}
+
+
+			</td>
+			<td>
+				{{ i.annualincome }}
+
+
+			</td>
+		
+
+        <!-- {% endfor %} -->
+		</tr>
+	
+	<tr>
+		<th>email</th>
+
+		<th>password</th>
+		<th>bodytype</th>
+		<th>weight</th>
+		<th>mother tongue</th>
+		<th>marital status</th>
+		<th>physical status</th>
+		<th>eating habits</th>
+		<th>drinking habits</th>
+		<th>smoking habits</th>
+		</tr>
+		<tr>
+			<!-- {% for i in p %} -->
+			<td>
+				{{ i.email }}
+
+
+			</td>
+			<td>
+				{{ i.password }}
+				
+			</td>
+			<td>
+				{{ i.bodytype }}
+				</td>
+				<td>
+				{{ i.weight }}
+				</td>
+				<td>
+				{{ i.mothertongue }}
+				
+			</td>
+			<td>
+				{{ i.maritalstatus }}
+
+
+			</td>
+			<td>
+				{{ i.physicalstatus }}
+
+
+			</td>
+			<td>
+				{{ i.eatinghabits }}
+
+
+			</td>
+
+			<td>
+				{{ i.drinkinghabits }}
+
+
+			</td>
+			<td>
+				{{ i.smokinghabits }}
+
+
+			</td>
+			
+			
+        <!-- {% endfor %} -->
+		</tr>
+	
+
+		<tr>
+		<th>contact number</th>
+
+		<th>parent contact</th>
+		<th>star</th>
+		<th>country</th>
+		<th>state</th>
+		<th>citizenship</th>
+		<th>date of birth</th>
+		<th>place of birth</th>
+		<th>time of birth</th>
+		<th>for who</th>
+		</tr>
+		<tr>
+			<!-- {% for i in p %} -->
+			<td>
+				{{ i.contactnumber }}
+
+
+			</td>
+			<td>
+				{{ i.parentcontact }}
+				
+			</td>
+			<td>
+				{{ i.star }}
+				</td>
+				<td>
+				{{ i.country }}
+				</td>
+				<td>
+				{{ i.state }}
+				
+			</td>
+			<td>
+				{{ i.citizenship }}
+
+
+			</td>
+			<td>
+				{{ i.dateofbirth }}
+
+
+			</td>
+			<td>
+				{{ i.placeofbirth }}
+
+
+			</td>
+
+			<td>
+				{{ i.timeofbirth }}
+
+
+			</td>
+			<td>
+				{{ i.forwho }}
+
+
+			</td>
+			
+			
+        <!-- {% endfor %} -->
+		</tr>
+	
+
+
+		<tr>
+		<th>partner</th>
+
+		<th>partner age</th>
+		<th>partner height</th>
+		<th>partner mother tongue</th>
+		<th>partner physical status</th>
+		<th>partner eating habits</th>
+		<th>partner smoking habits</th>
+		<th>partner drinking habits</th>
+		<th>partner education</th>
+		<th>partner occupation</th>
+		</tr>
+		<tr>
+			<!-- {% for i in p %} -->
+			<td>
+				{{ i.partner }}
+
+
+			</td>
+			<td>
+				{{ i.partnerage }}
+				
+			</td>
+			<td>
+				{{ i.partnerheight }}
+				</td>
+				<td>
+				{{ i.partnermothertongue }}
+				</td>
+				<td>
+				{{ i.partnerphysicalstatus }}
+				
+			</td>
+			<td>
+				{{ i.partnereatinghabits }}
+
+
+			</td>
+			<td>
+				{{ i.partnersmokinghabits }}
+
+
+			</td>
+			<td>
+				{{ i.partnerdrinkinghabits }}
+
+
+			</td>
+
+			<td>
+				{{ i.partnereducation }}
+
+
+			</td>
+			<td>
+				{{ i.partneroccupation }}
+
+
+			</td>
+			
+			
+        <!-- {% endfor %} -->
+		</tr>
+	
+
+
+		<tr>
+		<th>partner annual income</th>
+
+		<th>partner religion</th>
+		<th>partner caste</th>
+		<th>partner star</th>
+		<th>partner country</th>
+		<th>partner state</th>
+		<th>partner citizenship</th>
+		<th>partner city</th>
+
+	</tr>
+	<tr>
+		<!-- {% for i in p %} -->
+		<td>
+			{{ i.partnerannualincome }}
+
+
+		</td>
+		<td>
+			{{ i.partnerreligion }}
+			
+		</td>
+			<td>
+			{{ i.partnercaste }}
+			</td>
+			<td>
+			{{ i.partnerstar }}
+			
+		</td>
+		<td>
+			{{ i.partnercountry }}
+
+
+		</td>
+		<td>
+			{{ i.partnerstate }}
+
+
+		</td>
+		<td>
+			{{ i.partnercitizenship }}
+
+
+		</td>
+
+		<td>
+			{{ i.partnercity }}
+
+
+		</td>
+		<td>
+			<a href="{% url 'update' id=i.id%}" class="btn btn-success">update</a>
+		</td>
+		<td>
+			<a href="{% url 'delete' id=i.id%}" class="btn btn-danger">delete</a>
+		</td>
+			
+		
+	<!-- {% endfor %} -->
+	</tr>
+
+
+</div>
+{% endfor %}
+
+
+</table>
+</div>
+{% endblock %}
